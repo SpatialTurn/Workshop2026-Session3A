@@ -340,9 +340,9 @@
         
 <section id="aio-ndvi-analysis"><p>Content from <a href="ndvi-analysis.html">Exercises: NDVI Analysis with Sentinel-2 Imagery</a></p>
 <hr>
-<p>Last updated on 2026-06-28 |
+<p>Last updated on 2026-10-17 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/SpatialTurn/session3a/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -390,7 +390,7 @@ light (which healthy vegetation strongly reflects). The formula is:</p>
 <p>NDVI values range from −1 to +1. Values near +1 indicate dense,
 healthy vegetation; values near 0 indicate bare soil or sparse cover;
 and negative values typically indicate water, clouds, or snow.</p>
-<figure><img src="01_Globalndvi_tmo_200711_lrg.png" title="Global NDVI — Source: NASA Earth Observatory, produced by Reto Stöckli and Jesse Allen using MODIS Land Science Team data" alt="Global NDVI composite showing vegetation density across the Earth’s surface." class="figure mx-auto d-block"><div class="figcaption">Global NDVI composite showing vegetation density
+<figure><img src="01_Globalndvi_tmo_200711_lrg.png" title="Global NDVI. Source: NASA Earth Observatory, produced by Reto Stöckli and Jesse Allen using MODIS Land Science Team data" alt="Global NDVI composite showing vegetation density across the Earth’s surface." class="figure mx-auto d-block"><div class="figcaption">Global NDVI composite showing vegetation density
 across the Earth’s surface.</div>
 </figure><p>In this exercise we will use a Sentinel-2 multispectral image to
 calculate NDVI for a region in south-central Kansas.</p>
@@ -453,11 +453,11 @@ Sentinel-2 data.</div>
 files. For NDVI we only need two:</p>
 <ul>
 <li>
-<strong>Band 4</strong> (Red) —
+<strong>Band 4</strong> (Red):
 <code>T14SPG_20260617T170849_B04.jp2</code>
 </li>
 <li>
-<strong>Band 8</strong> (Near-Infrared) —
+<strong>Band 8</strong> (Near-Infrared):
 <code>T14SPG_20260617T170849_B08.jp2</code>
 </li>
 </ul>
@@ -472,7 +472,7 @@ L1C_T14SPG_… → IMG_DATA</strong>
 </ol>
 <figure><img src="03_Bands4_and_8.png" title="Bands 4 and 8" alt="Bands 4 and 8 loaded into QGIS." class="figure mx-auto d-block"><div class="figcaption">Bands 4 and 8 loaded into QGIS.</div>
 </figure><p>Toggle each layer’s visibility using the checkbox next to its name to
-see how the two bands differ — Band 4 captures visible red light, while
+see how the two bands differ: Band 4 captures visible red light, while
 Band 8 captures near-infrared reflectance that is invisible to the human
 eye but strongly reflected by healthy vegetation.</p>
 <hr></section><section><h2 class="section-heading" id="step-4-calculate-ndvi-with-the-raster-calculator">Step 4: Calculate NDVI with the Raster Calculator<a class="anchor" aria-label="anchor" href="#step-4-calculate-ndvi-with-the-raster-calculator"></a>
@@ -494,7 +494,7 @@ save it as <code>NDVI_Output</code> in your NDVI_Analysis folder.</li>
 <li>Click <strong>OK</strong> to run the calculation.</li>
 </ol>
 <p>Once the output loads, you can right-click Bands 4 and 8 in the
-Layers Panel and select <strong>Remove Layer</strong> — they are no
+Layers Panel and select <strong>Remove Layer</strong>: they are no
 longer needed.</p>
 <hr></section><section><h2 class="section-heading" id="step-5-apply-color-symbology">Step 5: Apply Color Symbology<a class="anchor" aria-label="anchor" href="#step-5-apply-color-symbology"></a>
 </h2>
@@ -525,7 +525,7 @@ configured.</div>
 <p>The green-only ramp shows the classification, but we can make
 interpretation more intuitive by matching colors to vegetation health
 levels.</p>
-<figure><img src="06_NDVI_Reference.png" title="NDVI Reference Scale — Source: Geopard.tech" alt="NDVI reference scale showing the relationship between NDVI values and vegetation health." class="figure mx-auto d-block"><div class="figcaption">NDVI reference scale showing the relationship
+<figure><img src="06_NDVI_Reference.png" title="NDVI Reference Scale. Source: Geopard.tech" alt="NDVI reference scale showing the relationship between NDVI values and vegetation health." class="figure mx-auto d-block"><div class="figcaption">NDVI reference scale showing the relationship
 between NDVI values and vegetation health.</div>
 </figure><p>Using the reference scale above as a guide:</p>
 <ol style="list-style-type: decimal">
@@ -533,13 +533,13 @@ between NDVI values and vegetation health.</div>
 <li>Double-click each color swatch to change it:
 <ul>
 <li>
-<strong>Bottom class (0.05–0.33)</strong> → <strong>Red</strong> —
+<strong>Bottom class (0.05 to 0.33)</strong> → <strong>Red</strong>:
 inanimate objects, bare soil, or dead vegetation</li>
 <li>
-<strong>Middle class (0.33–0.66)</strong> → <strong>Yellow</strong>
-— unhealthy or sparse vegetation</li>
+<strong>Middle class (0.33 to 0.66)</strong> →
+<strong>Yellow</strong>: unhealthy or sparse vegetation</li>
 <li>
-<strong>Top class (0.66–1.0)</strong> → <strong>Green</strong> —
+<strong>Top class (0.66 to 1.0)</strong> → <strong>Green</strong>:
 dense, healthy vegetation</li>
 </ul>
 </li>
@@ -560,7 +560,7 @@ applied.</div>
 <li>Can you identify Wichita (the largest city in the region)? What NDVI
 values dominate urban areas?</li>
 <li>Can you locate any lakes or rivers? What values do they show?</li>
-<li>Where is the densest vegetation — is it farmland, forest, or
+<li>Where is the densest vegetation: is it farmland, forest, or
 something else?</li>
 </ol>
 <p>Write down your initial observations. We will check them against
@@ -598,7 +598,7 @@ imagery for comparison.</div>
 <p>Compare your NDVI results against the satellite basemap.</p>
 <ol style="list-style-type: decimal">
 <li>Were your initial observations from Exercise 1 correct?</li>
-<li>Did anything surprise you — areas you expected to be vegetated that
+<li>Did anything surprise you: areas you expected to be vegetated that
 were not, or vice versa?</li>
 <li>Can you identify any agricultural fields? How do their NDVI values
 differ from surrounding natural vegetation?</li>
@@ -632,14 +632,14 @@ your interpretation of the results.</li>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 </section></section><section id="aio-flood-analysis"><p>Content from <a href="flood-analysis.html">Exercises: Flood Analysis with False Color Composites and NDWI</a></p>
 <hr>
-<p>Last updated on 2026-06-28 |
+<p>Last updated on 2026-10-17 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/flood-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/SpatialTurn/session3a/edit/main/episodes/flood-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -684,7 +684,7 @@ extent</li>
 </h2>
 <hr class="half-width">
 <p>In the previous episode we used NDVI to identify vegetation. In this
-episode we shift focus to water — specifically, how to identify the
+episode we shift focus to water, specifically, how to identify the
 extent of flooding using two complementary techniques: <strong>False
 Color Composites (FCC)</strong> and the <strong>Normalized Difference
 Water Index (NDWI)</strong>.</p>
@@ -694,29 +694,29 @@ Water Index (NDWI)</strong>.</p>
 <p>A true color image maps the red, green, and blue bands to their
 corresponding RGB screen channels, producing an image that looks like a
 normal photograph. A <strong>false color composite</strong> swaps one of
-those bands — typically replacing blue with near-infrared — so that
+those bands (typically replacing blue with near-infrared) so that
 features invisible to the human eye become visible on screen.</p>
 <p>In a standard NRG false color composite (NIR → Red channel, Red →
 Green channel, Green → Blue channel):</p>
 <ul>
 <li>
-<strong>Vegetation</strong> appears <strong>red</strong> — because
+<strong>Vegetation</strong> appears <strong>red</strong> because
 healthy vegetation strongly reflects near-infrared light, which is now
 displayed in the red channel</li>
 <li>
-<strong>Water</strong> appears <strong>dark blue to black</strong> —
+<strong>Water</strong> appears <strong>dark blue to black</strong>
 because water absorbs most near-infrared light</li>
 <li>
 <strong>Bare soil and infrastructure</strong> appear <strong>grey to
 white</strong>
 </li>
 </ul>
-<figure><img src="01_FCC_Example.png" title="False Color Composite Example — Source: Lamb 2001" alt="Diagram showing how true color and false color composites map spectral bands to RGB screen channels differently." class="figure mx-auto d-block"><div class="figcaption">Diagram showing how true color and false color
+<figure><img src="01_FCC_Example.png" title="False Color Composite Example. Source: Lamb 2001" alt="Diagram showing how true color and false color composites map spectral bands to RGB screen channels differently." class="figure mx-auto d-block"><div class="figcaption">Diagram showing how true color and false color
 composites map spectral bands to RGB screen channels differently.</div>
-</figure><figure><img src="02_Reflectance_Figure.png" title="Spectral Reflectance — Source: Khan et al. 2018" alt="Chart showing reflectance values across wavelengths for different surface types, illustrating why band substitution reveals hidden features." class="figure mx-auto d-block"><div class="figcaption">Chart showing reflectance values across
+</figure><figure><img src="02_Reflectance_Figure.png" title="Spectral Reflectance. Source: Khan et al. 2018" alt="Chart showing reflectance values across wavelengths for different surface types, illustrating why band substitution reveals hidden features." class="figure mx-auto d-block"><div class="figcaption">Chart showing reflectance values across
 wavelengths for different surface types, illustrating why band
 substitution reveals hidden features.</div>
-</figure><figure><img src="03_FCC_Screen_Example.png" title="False Color Composite — Source: European Space Agency" alt="A false color composite example from Sentinel-2 imagery." class="figure mx-auto d-block"><div class="figcaption">A false color composite example from Sentinel-2
+</figure><figure><img src="03_FCC_Screen_Example.png" title="False Color Composite. Source: European Space Agency" alt="A false color composite example from Sentinel-2 imagery." class="figure mx-auto d-block"><div class="figcaption">A false color composite example from Sentinel-2
 imagery.</div>
 </figure>
 </div>
@@ -816,11 +816,11 @@ Virtual Raster</strong>.</li>
 arrange the bands by dragging them into this order:
 <ul>
 <li>
-<strong>B08</strong> (NIR — will map to the red channel)</li>
+<strong>B08</strong> (NIR: will map to the red channel)</li>
 <li>
-<strong>B04</strong> (Red — will map to the green channel)</li>
+<strong>B04</strong> (Red: will map to the green channel)</li>
 <li>
-<strong>B03</strong> (Green — will map to the blue channel)</li>
+<strong>B03</strong> (Green: will map to the blue channel)</li>
 </ul>
 </li>
 <li>Click <strong>Select All</strong>, then click the back arrow in the
@@ -870,7 +870,7 @@ Composite</h3>
 <li>How accurate is the FCC at showing flood extent? Can you identify
 areas that were clearly underwater?</li>
 <li>What does the FCC struggle to distinguish? Look carefully at lighter
-blue areas — are they floodwater, or bare soil?</li>
+blue areas: are they floodwater, or bare soil?</li>
 <li>What was the approximate extent of flooding in this region?</li>
 </ol>
 </div>
@@ -912,7 +912,7 @@ pseudocolor</strong>.</li>
 <li>Set the <strong>Mode</strong> to <strong>Equal Interval</strong> and
 reduce <strong>Classes</strong> to <strong>2</strong>.</li>
 <li>In the <strong>Value</strong> column, set the first value to
-<code>0</code> — this creates a clean split between water (positive
+<code>0</code>: this creates a clean split between water (positive
 values, blue) and non-water (negative values).</li>
 <li>Click <strong>Apply</strong>.</li>
 </ol>
@@ -977,16 +977,16 @@ floodwater that appears similar to bare soil.</li>
 <li>NDWI uses the ratio of green and near-infrared reflectance to
 isolate water features, providing a more reliable delineation of flood
 extent.</li>
-<li>Overlaying NDWI on an FCC combines the strengths of both methods —
+<li>Overlaying NDWI on an FCC combines the strengths of both methods:
 spectral precision from NDWI and spatial context from the FCC.</li>
 </ul>
 </div>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 </section></section>
 </div>
     </main>
@@ -1000,11 +1000,11 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/session3a/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/session3a/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/session3a/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
         | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
@@ -1027,18 +1027,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/aio.html",
+  "@id": "https://SpatialTurn.github.io/session3a/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "ndvi, flood, analysis, satellite",
+  "keywords": "satellite imagery, NDVI, NDWI, false color composite, flood mapping, Sentinel-2, QGIS",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/aio.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/aio.html",
+  "url": "https://SpatialTurn.github.io/session3a/aio.html",
+  "identifier": "https://SpatialTurn.github.io/session3a/aio.html",
   "dateCreated": "2026-06-25",
-  "dateModified": "2026-10-13",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>

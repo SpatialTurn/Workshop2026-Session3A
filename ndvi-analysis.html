@@ -313,9 +313,9 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Exercises: NDVI Analysis with Sentinel-2 Imagery</h1>
-        <p>Last updated on 2026-06-28 |
+        <p>Last updated on 2026-10-17 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/SpatialTurn/session3a/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
@@ -363,7 +363,7 @@ light (which healthy vegetation strongly reflects). The formula is:</p>
 <p>NDVI values range from −1 to +1. Values near +1 indicate dense,
 healthy vegetation; values near 0 indicate bare soil or sparse cover;
 and negative values typically indicate water, clouds, or snow.</p>
-<figure><img src="01_Globalndvi_tmo_200711_lrg.png" title="Global NDVI — Source: NASA Earth Observatory, produced by Reto Stöckli and Jesse Allen using MODIS Land Science Team data" alt="Global NDVI composite showing vegetation density across the Earth’s surface." class="figure mx-auto d-block"><div class="figcaption">Global NDVI composite showing vegetation density
+<figure><img src="01_Globalndvi_tmo_200711_lrg.png" title="Global NDVI. Source: NASA Earth Observatory, produced by Reto Stöckli and Jesse Allen using MODIS Land Science Team data" alt="Global NDVI composite showing vegetation density across the Earth’s surface." class="figure mx-auto d-block"><div class="figcaption">Global NDVI composite showing vegetation density
 across the Earth’s surface.</div>
 </figure><p>In this exercise we will use a Sentinel-2 multispectral image to
 calculate NDVI for a region in south-central Kansas.</p>
@@ -413,11 +413,11 @@ Sentinel-2 data.</div>
 <hr class="half-width"><p>Sentinel-2 images contain 13 spectral bands stored as individual
 files. For NDVI we only need two:</p>
 <ul><li>
-<strong>Band 4</strong> (Red) —
+<strong>Band 4</strong> (Red):
 <code>T14SPG_20260617T170849_B04.jp2</code>
 </li>
 <li>
-<strong>Band 8</strong> (Near-Infrared) —
+<strong>Band 8</strong> (Near-Infrared):
 <code>T14SPG_20260617T170849_B08.jp2</code>
 </li>
 </ul><p>To find them:</p>
@@ -429,7 +429,7 @@ L1C_T14SPG_… → IMG_DATA</strong>
 <strong>Layers Panel</strong>.</li>
 </ol><figure><img src="03_Bands4_and_8.png" title="Bands 4 and 8" alt="Bands 4 and 8 loaded into QGIS." class="figure mx-auto d-block"><div class="figcaption">Bands 4 and 8 loaded into QGIS.</div>
 </figure><p>Toggle each layer’s visibility using the checkbox next to its name to
-see how the two bands differ — Band 4 captures visible red light, while
+see how the two bands differ: Band 4 captures visible red light, while
 Band 8 captures near-infrared reflectance that is invisible to the human
 eye but strongly reflected by healthy vegetation.</p>
 <hr></section><section><h2 class="section-heading" id="step-4-calculate-ndvi-with-the-raster-calculator">Step 4: Calculate NDVI with the Raster Calculator<a class="anchor" aria-label="anchor" href="#step-4-calculate-ndvi-with-the-raster-calculator"></a></h2>
@@ -445,7 +445,7 @@ entered.</div>
 save it as <code>NDVI_Output</code> in your NDVI_Analysis folder.</li>
 <li>Click <strong>OK</strong> to run the calculation.</li>
 </ol><p>Once the output loads, you can right-click Bands 4 and 8 in the
-Layers Panel and select <strong>Remove Layer</strong> — they are no
+Layers Panel and select <strong>Remove Layer</strong>: they are no
 longer needed.</p>
 <hr></section><section><h2 class="section-heading" id="step-5-apply-color-symbology">Step 5: Apply Color Symbology<a class="anchor" aria-label="anchor" href="#step-5-apply-color-symbology"></a></h2>
 <hr class="half-width"><p>The raw NDVI output appears in grayscale. To make vegetation patterns
@@ -470,19 +470,19 @@ configured.</div>
 <hr class="half-width"><p>The green-only ramp shows the classification, but we can make
 interpretation more intuitive by matching colors to vegetation health
 levels.</p>
-<figure><img src="06_NDVI_Reference.png" title="NDVI Reference Scale — Source: Geopard.tech" alt="NDVI reference scale showing the relationship between NDVI values and vegetation health." class="figure mx-auto d-block"><div class="figcaption">NDVI reference scale showing the relationship
+<figure><img src="06_NDVI_Reference.png" title="NDVI Reference Scale. Source: Geopard.tech" alt="NDVI reference scale showing the relationship between NDVI values and vegetation health." class="figure mx-auto d-block"><div class="figcaption">NDVI reference scale showing the relationship
 between NDVI values and vegetation health.</div>
 </figure><p>Using the reference scale above as a guide:</p>
 <ol style="list-style-type: decimal"><li>Reopen the <strong>Symbology</strong> tab.</li>
 <li>Double-click each color swatch to change it:
 <ul><li>
-<strong>Bottom class (0.05–0.33)</strong> → <strong>Red</strong> —
+<strong>Bottom class (0.05 to 0.33)</strong> → <strong>Red</strong>:
 inanimate objects, bare soil, or dead vegetation</li>
 <li>
-<strong>Middle class (0.33–0.66)</strong> → <strong>Yellow</strong>
-— unhealthy or sparse vegetation</li>
+<strong>Middle class (0.33 to 0.66)</strong> →
+<strong>Yellow</strong>: unhealthy or sparse vegetation</li>
 <li>
-<strong>Top class (0.66–1.0)</strong> → <strong>Green</strong> —
+<strong>Top class (0.66 to 1.0)</strong> → <strong>Green</strong>:
 dense, healthy vegetation</li>
 </ul></li>
 <li>Click <strong>Apply</strong>, then <strong>OK</strong>.</li>
@@ -500,7 +500,7 @@ applied.</div>
 <ol style="list-style-type: decimal"><li>Can you identify Wichita (the largest city in the region)? What NDVI
 values dominate urban areas?</li>
 <li>Can you locate any lakes or rivers? What values do they show?</li>
-<li>Where is the densest vegetation — is it farmland, forest, or
+<li>Where is the densest vegetation: is it farmland, forest, or
 something else?</li>
 </ol><p>Write down your initial observations. We will check them against
 satellite imagery in the next step.</p>
@@ -532,7 +532,7 @@ imagery for comparison.</div>
 <div class="callout-content">
 <p>Compare your NDVI results against the satellite basemap.</p>
 <ol style="list-style-type: decimal"><li>Were your initial observations from Exercise 1 correct?</li>
-<li>Did anything surprise you — areas you expected to be vegetated that
+<li>Did anything surprise you: areas you expected to be vegetated that
 were not, or vice versa?</li>
 <li>Can you identify any agricultural fields? How do their NDVI values
 differ from surrounding natural vegetation?</li>
@@ -562,9 +562,9 @@ your interpretation of the results.</li>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -589,11 +589,11 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/session3a/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/session3a/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/session3a/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
         | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
@@ -615,18 +615,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/ndvi-analysis.html",
+  "@id": "https://SpatialTurn.github.io/session3a/ndvi-analysis.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "ndvi, flood, analysis, satellite",
+  "keywords": "satellite imagery, NDVI, NDWI, false color composite, flood mapping, Sentinel-2, QGIS",
   "name": "Exercises: NDVI Analysis with Sentinel-2 Imagery",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/ndvi-analysis.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/ndvi-analysis.html",
+  "url": "https://SpatialTurn.github.io/session3a/ndvi-analysis.html",
+  "identifier": "https://SpatialTurn.github.io/session3a/ndvi-analysis.html",
   "dateCreated": "2026-06-25",
-  "dateModified": "2026-06-28",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>

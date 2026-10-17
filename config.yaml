@@ -18,30 +18,30 @@ carpentry: 'incubator'
 carpentry_description: 'Analysis and visualization techniques with satellite imagery'
 
 # Overall title for pages.
-title: 'Satellite Imagery Analysis' # FIXME
+title: 'Satellite Imagery Analysis'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2026-06-25 # FIXME
+created: '2026-06-25'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'ndvi, flood, analysis, satellite' # FIXME
+keywords: 'satellite imagery, NDVI, NDWI, false color composite, flood mapping, Sentinel-2, QGIS'
 
 # Life cycle stage of the lesson
 # refer to <https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html> for details
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'alpha' # FIXME
+life_cycle: 'alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+source: 'https://github.com/SpatialTurn/session3a'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'ilindsay@purdue.edu' # FIXME
+contact: 'ilindsay@purdue.edu'
 
 # Navigation ------------------------------------------------
 #

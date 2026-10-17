@@ -296,12 +296,20 @@
     </nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
-<p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs" class="external-link">The Carpentries
-Workbench</a>.</p>
+<p>Analysis of Sentinel-2 satellite imagery in QGIS: vegetation mapping
+with NDVI and flood mapping with false color composites and NDWI.</p>
+<p>This module was taught as part of the Purdue-NSF GIS Cybertraining
+for the Social Sciences Workshop, a two-day workshop held at Purdue
+University in 2026 (Day 1, Session A QGIS track, part 3). See the <a href="https://spatialturn.github.io/workshop2026.html" class="external-link">Workshop 2026
+page</a> for the full program.</p>
+<p>It is part of <a href="https://spatialturn.github.io/" class="external-link">Enabling the
+Geospatial Turn in the Social Sciences</a>, a set of training modules
+developed at Purdue University with support from the National Science
+Foundation.</p>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 
 
       <section id="setup"><section><h2 class="section-heading" id="what-you-need-for-this-session">What You Need for This Session<a class="anchor" aria-label="anchor" href="#what-you-need-for-this-session"></a></h2>
@@ -311,19 +319,19 @@ session begins.</p>
 <div class="section level3">
 <h3 id="software">Software<a class="anchor" aria-label="anchor" href="#software"></a></h3>
 <ul><li>
-<strong>QGIS Desktop (LTR)</strong> — should already be installed
+<strong>QGIS Desktop (LTR)</strong>: should already be installed
 from Session 1a/2a.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="accounts">Accounts<a class="anchor" aria-label="anchor" href="#accounts"></a></h3>
 <ul><li>
-<strong>Copernicus Data Space</strong> — for accessing Sentinel-2
+<strong>Copernicus Data Space</strong>: for accessing Sentinel-2
 imagery. If you have not yet registered, create a free account at <a href="https://dataspace.copernicus.eu" class="external-link">https://dataspace.copernicus.eu</a>.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a></h3>
 <ul><li>
-<strong>Sentinel-2 image for the NDVI exercise</strong> — download
+<strong>Sentinel-2 image for the NDVI exercise</strong>: download
 the ZIP file
 <code>S2B_MSIL1C_20260617T170849_N0512_R112_T14SPG_20260617T203803.SAFE.zip</code>
 from the workshop’s participant resources Google Drive under <a href="https://drive.google.com/drive/folders/1eLEVONp7J7PeEPeFn1pC6Bm6YG9qIC-c" class="external-link"><strong>Day
@@ -331,7 +339,7 @@ from the workshop’s participant resources Google Drive under <a href="https://
 folder on your desktop called <strong>NDVI_Analysis</strong>
 locally.</li>
 <li>
-<strong>SRTM DEM tile</strong> — you should already have this from
+<strong>SRTM DEM tile</strong>: you should already have this from
 Session 2a. If not, download one from <a href="https://earthexplorer.usgs.gov/" class="external-link">USGS EarthExplorer</a> following
 the instructions in the Session 2a episode.</li>
 </ul></div>
@@ -347,15 +355,15 @@ South Caucasus. Advances in Archaeological Practice. 2023;11(2):164-183.
 <a class="anchor" aria-label="anchor" href="#lindsay-i-mkrtchyan-a--free-and-low-cost-aerial-remote-sensing-in-archaeology-an-overview-of-data-sources-and-recent-applications-in-the-south-caucasus--advances-in-archaeological-practice--2023112164-183--httpsdoi-org10-1017aap-2023-3"></a></h6>
 <p>Two figures from this article are especially relevant to our
 session:</p>
-<figure><img src="table1.png" title="Table 1 from Mkrtchyan 2023 — Satellite Imagery Sources" alt="Free and low-cost satellite imagery sources commonly used in archaeological and heritage applications." class="figure mx-auto d-block"><div class="figcaption">Free and low-cost satellite imagery sources
+<figure><img src="table1.png" title="Table 1 from Mkrtchyan 2023: Satellite Imagery Sources" alt="Free and low-cost satellite imagery sources commonly used in archaeological and heritage applications." class="figure mx-auto d-block"><div class="figcaption">Free and low-cost satellite imagery sources
 commonly used in archaeological and heritage applications.</div>
-</figure><figure><img src="figure5.png" title="Figure 5 from Mkrtchyan 2023 — DEM-Derived Products" alt="SRTM digital elevation model of the Mount Aragats region of Armenia and examples of common elevation products derived from the model: (a) raw SRTM DEM data; (b) hillshade; (c) slope calculated as percent, with slopes greater than 15% in red; (d) contour lines." class="figure mx-auto d-block"><div class="figcaption">SRTM digital elevation model of the Mount
+</figure><figure><img src="figure5.png" title="Figure 5 from Mkrtchyan 2023: DEM-Derived Products" alt="SRTM digital elevation model of the Mount Aragats region of Armenia and examples of common elevation products derived from the model: (a) raw SRTM DEM data; (b) hillshade; (c) slope calculated as percent, with slopes greater than 15% in red; (d) contour lines." class="figure mx-auto d-block"><div class="figcaption">SRTM digital elevation model of the Mount
 Aragats region of Armenia and examples of common elevation products
 derived from the model: (a) raw SRTM DEM data; (b) hillshade; (c) slope
 calculated as percent, with slopes greater than 15% in red; (d) contour
 lines.</div>
 </figure><p>These examples illustrate the range of analysis you can perform with
-freely available satellite and elevation data — the same tools and data
+freely available satellite and elevation data: the same tools and data
 sources we use in this workshop.</p>
 <hr></div>
 </div>
@@ -370,9 +378,9 @@ saved to your NDVI_Analysis folder</label></li>
 <li><label><input type="checkbox">SRTM DEM tile available from Session
 2a</label></li>
 </ul><!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- --></div>
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+--></div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="ndvi-analysis.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -388,11 +396,11 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/index.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/session3a/edit/main/index.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/session3a/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/session3a/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
         | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
@@ -414,18 +422,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/index.html",
+  "@id": "https://SpatialTurn.github.io/session3a/index.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "ndvi, flood, analysis, satellite",
+  "keywords": "satellite imagery, NDVI, NDWI, false color composite, flood mapping, Sentinel-2, QGIS",
   "name": "Satellite Imagery Analysis",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/index.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/index.html",
+  "url": "https://SpatialTurn.github.io/session3a/index.html",
+  "identifier": "https://SpatialTurn.github.io/session3a/index.html",
   "dateCreated": "2026-06-25",
-  "dateModified": "2026-10-13",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>
