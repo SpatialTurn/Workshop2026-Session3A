@@ -35,7 +35,7 @@ life_cycle: 'alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/SpatialTurn/session3a'
+source: 'https://github.com/SpatialTurn/Workshop2026-Session3A'
 
 # Default branch of your lesson
 branch: 'main'
