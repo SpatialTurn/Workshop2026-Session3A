@@ -10,16 +10,16 @@ Session 3a builds directly on the DEM and Sentinel-2 data you worked with in Ses
 
 ### Software
 
-- **QGIS Desktop (LTR)** — should already be installed from Session 1a/2a.
+- **QGIS Desktop (LTR)**: should already be installed from Session 1a/2a.
 
 ### Accounts
 
-- **Copernicus Data Space** — for accessing Sentinel-2 imagery. If you have not yet registered, create a free account at [https://dataspace.copernicus.eu](https://dataspace.copernicus.eu).
+- **Copernicus Data Space**: for accessing Sentinel-2 imagery. If you have not yet registered, create a free account at [https://dataspace.copernicus.eu](https://dataspace.copernicus.eu).
 
 ### Data
 
-- **Sentinel-2 image for the NDVI exercise** — download the ZIP file `S2B_MSIL1C_20260617T170849_N0512_R112_T14SPG_20260617T203803.SAFE.zip` from the workshop's participant resources Google Drive under [**Day 1_Session 3a: Basic raster functions**](https://drive.google.com/drive/folders/1eLEVONp7J7PeEPeFn1pC6Bm6YG9qIC-c). Save it to a new folder on your desktop called **NDVI_Analysis** locally.
-- **SRTM DEM tile** — you should already have this from Session 2a. If not, download one from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) following the instructions in the Session 2a episode.
+- **Sentinel-2 image for the NDVI exercise**: download the ZIP file `S2B_MSIL1C_20260617T170849_N0512_R112_T14SPG_20260617T203803.SAFE.zip` from the workshop's participant resources Google Drive under [**Day 1_Session 3a: Basic raster functions**](https://drive.google.com/drive/folders/1eLEVONp7J7PeEPeFn1pC6Bm6YG9qIC-c). Save it to a new folder on your desktop called **NDVI_Analysis** locally.
+- **SRTM DEM tile**: you should already have this from Session 2a. If not, download one from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) following the instructions in the Session 2a episode.
 
 ### Background Reading
 
@@ -29,11 +29,11 @@ The following article provides useful context on the satellite imagery sources a
 
 Two figures from this article are especially relevant to our session:
 
-![Free and low-cost satellite imagery sources commonly used in archaeological and heritage applications.](table1.png "Table 1 from Mkrtchyan 2023 — Satellite Imagery Sources")
+![Free and low-cost satellite imagery sources commonly used in archaeological and heritage applications.](table1.png "Table 1 from Mkrtchyan 2023: Satellite Imagery Sources")
 
-![SRTM digital elevation model of the Mount Aragats region of Armenia and examples of common elevation products derived from the model: (a) raw SRTM DEM data; (b) hillshade; (c) slope calculated as percent, with slopes greater than 15% in red; (d) contour lines.](figure5.png "Figure 5 from Mkrtchyan 2023 — DEM-Derived Products")
+![SRTM digital elevation model of the Mount Aragats region of Armenia and examples of common elevation products derived from the model: (a) raw SRTM DEM data; (b) hillshade; (c) slope calculated as percent, with slopes greater than 15% in red; (d) contour lines.](figure5.png "Figure 5 from Mkrtchyan 2023: DEM-Derived Products")
 
-These examples illustrate the range of analysis you can perform with freely available satellite and elevation data — the same tools and data sources we use in this workshop.
+These examples illustrate the range of analysis you can perform with freely available satellite and elevation data: the same tools and data sources we use in this workshop.
 
 ---
 
