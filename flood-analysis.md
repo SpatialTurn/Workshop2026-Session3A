@@ -24,23 +24,23 @@ exercises: 15
 
 ## Introduction
 
-In the previous episode we used NDVI to identify vegetation. In this episode we shift focus to water — specifically, how to identify the extent of flooding using two complementary techniques: **False Color Composites (FCC)** and the **Normalized Difference Water Index (NDWI)**.
+In the previous episode we used NDVI to identify vegetation. In this episode we shift focus to water, specifically, how to identify the extent of flooding using two complementary techniques: **False Color Composites (FCC)** and the **Normalized Difference Water Index (NDWI)**.
 
 ### What Is a False Color Composite?
 
-A true color image maps the red, green, and blue bands to their corresponding RGB screen channels, producing an image that looks like a normal photograph. A **false color composite** swaps one of those bands — typically replacing blue with near-infrared — so that features invisible to the human eye become visible on screen.
+A true color image maps the red, green, and blue bands to their corresponding RGB screen channels, producing an image that looks like a normal photograph. A **false color composite** swaps one of those bands (typically replacing blue with near-infrared) so that features invisible to the human eye become visible on screen.
 
 In a standard NRG false color composite (NIR → Red channel, Red → Green channel, Green → Blue channel):
 
-- **Vegetation** appears **red** — because healthy vegetation strongly reflects near-infrared light, which is now displayed in the red channel
-- **Water** appears **dark blue to black** — because water absorbs most near-infrared light
+- **Vegetation** appears **red** because healthy vegetation strongly reflects near-infrared light, which is now displayed in the red channel
+- **Water** appears **dark blue to black** because water absorbs most near-infrared light
 - **Bare soil and infrastructure** appear **grey to white**
 
-![Diagram showing how true color and false color composites map spectral bands to RGB screen channels differently.](01_FCC_Example.png "False Color Composite Example — Source: Lamb 2001")
+![Diagram showing how true color and false color composites map spectral bands to RGB screen channels differently.](01_FCC_Example.png "False Color Composite Example. Source: Lamb 2001")
 
-![Chart showing reflectance values across wavelengths for different surface types, illustrating why band substitution reveals hidden features.](02_Reflectance_Figure.png "Spectral Reflectance — Source: Khan et al. 2018")
+![Chart showing reflectance values across wavelengths for different surface types, illustrating why band substitution reveals hidden features.](02_Reflectance_Figure.png "Spectral Reflectance. Source: Khan et al. 2018")
 
-![A false color composite example from Sentinel-2 imagery.](03_FCC_Screen_Example.png "False Color Composite — Source: European Space Agency")
+![A false color composite example from Sentinel-2 imagery.](03_FCC_Screen_Example.png "False Color Composite. Source: European Space Agency")
 
 ### What Is NDWI?
 
@@ -97,9 +97,9 @@ To combine three single-band rasters into one multi-band image, we use a **virtu
 
 1. From the menu bar, select **Raster → Miscellaneous → Build Virtual Raster**.
 2. Click the three dots next to **Input Layers** and arrange the bands by dragging them into this order:
-   - **B08** (NIR — will map to the red channel)
-   - **B04** (Red — will map to the green channel)
-   - **B03** (Green — will map to the blue channel)
+   - **B08** (NIR: will map to the red channel)
+   - **B04** (Red: will map to the green channel)
+   - **B03** (Green: will map to the blue channel)
 3. Click **Select All**, then click the back arrow in the top-left corner of the pop-up.
 
 ![The Build Virtual Raster dialog with bands arranged in NIR-Red-Green order.](05_Virtual_Raster_Popup.png "Virtual Raster Setup")
@@ -130,7 +130,7 @@ Toggle the `Flood_Output` layer on and off to compare the flooded landscape to p
 ### Exercise 1: Interpret the False Color Composite
 
 1. How accurate is the FCC at showing flood extent? Can you identify areas that were clearly underwater?
-2. What does the FCC struggle to distinguish? Look carefully at lighter blue areas — are they floodwater, or bare soil?
+2. What does the FCC struggle to distinguish? Look carefully at lighter blue areas: are they floodwater, or bare soil?
 3. What was the approximate extent of flooding in this region?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -162,7 +162,7 @@ The FCC provides a useful overview, but it has a limitation: muddy floodwater of
 3. Set **Interpolation** to **Discrete**.
 4. Set the **Color ramp** to **Blues**.
 5. Set the **Mode** to **Equal Interval** and reduce **Classes** to **2**.
-6. In the **Value** column, set the first value to `0` — this creates a clean split between water (positive values, blue) and non-water (negative values).
+6. In the **Value** column, set the first value to `0`: this creates a clean split between water (positive values, blue) and non-water (negative values).
 7. Click **Apply**.
 
 ![NDWI results with two-class blue symbology applied.](08Initial_NDWI_Results.png "Initial NDWI Results")
@@ -201,6 +201,6 @@ Toggle between the NDWI overlay, the FCC, and the Esri satellite basemap to answ
 - False color composites remap spectral bands to RGB channels, making vegetation (red), water (dark blue), and bare soil (grey/white) visually distinct.
 - FCC is a quick visual tool but struggles with muddy or shallow floodwater that appears similar to bare soil.
 - NDWI uses the ratio of green and near-infrared reflectance to isolate water features, providing a more reliable delineation of flood extent.
-- Overlaying NDWI on an FCC combines the strengths of both methods — spectral precision from NDWI and spatial context from the FCC.
+- Overlaying NDWI on an FCC combines the strengths of both methods: spectral precision from NDWI and spatial context from the FCC.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
