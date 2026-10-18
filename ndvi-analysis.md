@@ -55,7 +55,7 @@ Esri’s Sentinel-2 platform in the ArcGIS Living Atlas is a free, web-based too
 
 ## Step 2: Download and Extract the Sentinel-2 Image
 
-1. Navigate to the workshop's shared resources Google Drive. Under **Day 1_Session 3a: Basic raster functions**, download the ZIP file:
+1. Navigate to the workshop's shared resources Google Drive. Under [**Day 1_Session 3a: Basic raster functions**](https://drive.google.com/drive/folders/1eLEVONp7J7PeEPeFn1pC6Bm6YG9qIC-c), download the ZIP file:
    `S2B_MSIL1C_20260617T170849_N0512_R112_T14SPG_20260617T203803.SAFE.zip`
 
 2. Save the ZIP file to your **NDVI_Analysis** folder and extract it:
@@ -94,7 +94,7 @@ Toggle each layer's visibility using the checkbox next to its name to see how th
 ( "T14SPG_20260617T170849_B08@1" - "T14SPG_20260617T170849_B04@1" ) / ( "T14SPG_20260617T170849_B08@1" + "T14SPG_20260617T170849_B04@1" )
 ```
 
-![The Raster Calculator with the NDVI expression entered.](04_Raster_Caclulator .png "Raster Calculator")
+![The Raster Calculator with the NDVI expression entered.](04_Raster_Calculator.png "Raster Calculator")
 
 3. Click the three-dot button next to **Output layer** and save it as `NDVI_Output` in your NDVI_Analysis folder.
 4. Click **OK** to run the calculation.
@@ -157,7 +157,7 @@ Write down your initial observations. We will check them against satellite image
 To verify your interpretations, add a satellite basemap underneath the NDVI layer.
 
 1. From the menu bar, select **Plugins → Manage and Install Plugins**.
-2. Search for **QuickMapServices** and click **Install Plugin** (if not already installed from Session 1a).
+2. Search for **QuickMapServices** and click **Install Plugin** (if not already installed from Session 1A).
 3. After installation, a **QMS** panel should appear on the right side of your screen. Search for `imagery` and add **Esri Satellite (ArcGIS/World_Imagery)** to your map.
 
 Now toggle the NDVI layer on and off in the Layers Panel to compare your NDVI classification against the actual satellite imagery.
