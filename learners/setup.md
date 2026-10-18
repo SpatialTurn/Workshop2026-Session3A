@@ -6,11 +6,11 @@ exercises: 0
 
 ## What You Need for This Session
 
-Session 3a builds directly on the DEM and Sentinel-2 data you worked with in Session 2a. Make sure you have the following ready before the session begins.
+Session 3A analyzes Sentinel-2 imagery (NDVI and flood mapping). The images are provided in the workshop Google Drive, so you do not need data from Session 2A. Make sure you have the following ready before the session begins.
 
 ### Software
 
-- **QGIS Desktop (LTR)**: should already be installed from Session 1a/2a.
+- **QGIS Desktop (LTR)**: should already be installed from Session 1A or 2A.
 
 ### Accounts
 
@@ -19,7 +19,6 @@ Session 3a builds directly on the DEM and Sentinel-2 data you worked with in Ses
 ### Data
 
 - **Sentinel-2 image for the NDVI exercise**: download the ZIP file `S2B_MSIL1C_20260617T170849_N0512_R112_T14SPG_20260617T203803.SAFE.zip` from the workshop's participant resources Google Drive under [**Day 1_Session 3a: Basic raster functions**](https://drive.google.com/drive/folders/1eLEVONp7J7PeEPeFn1pC6Bm6YG9qIC-c). Save it to a new folder on your desktop called **NDVI_Analysis** locally.
-- **SRTM DEM tile**: you should already have this from Session 2a. If not, download one from [USGS EarthExplorer](https://earthexplorer.usgs.gov/) following the instructions in the Session 2a episode.
 
 ### Background Reading
 
@@ -42,4 +41,3 @@ These examples illustrate the range of analysis you can perform with freely avai
 - [ ] QGIS installed and opens successfully
 - [ ] Copernicus Data Space account created and verified
 - [ ] Sentinel-2 ZIP file downloaded and saved to your NDVI_Analysis folder
-- [ ] SRTM DEM tile available from Session 2a
