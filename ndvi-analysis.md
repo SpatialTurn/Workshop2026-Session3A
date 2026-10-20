@@ -111,9 +111,14 @@ The raw NDVI output appears in grayscale. To make vegetation patterns visible, w
 2. Change the **Render type** to **Singleband pseudocolor**.
 3. Set **Interpolation** to **Discrete**.
 4. Set the **Color ramp** to **Greens**.
-5. Under the table, set the **Mode** to **Equal Interval** and reduce the **Classes** to **3**.
-6. In the **Value** column, enter the following from bottom to top: `0.66`, `0.33`, `0.05`.
+5. Under the table, set the **Mode** to **Equal Interval**, reduce the **Classes** to **3** and click **Classify**.
+6. Double-click each number in the **Value** column and change the three values to `0.05`, `0.33` and `0.66`
+   (QGIS keeps them in order, lowest at the top).
 7. Click **Apply**.
+
+The column header reads **Value <=**: each value is the **upper limit** of its class. So the three classes are
+NDVI up to 0.05, from 0.05 to 0.33, and from 0.33 to 0.66. Pixels above the last value are left transparent;
+this image has almost none, but for other images change the last value to `1` so nothing disappears.
 
 ![The symbology popup with three NDVI classes configured.](05_ColorTable.png "NDVI Color Table")
 
@@ -129,12 +134,25 @@ Using the reference scale above as a guide:
 
 1. Reopen the **Symbology** tab.
 2. Double-click each color swatch to change it:
-   - **Bottom class (0.05 to 0.33)** → **Red**: inanimate objects, bare soil, or dead vegetation
-   - **Middle class (0.33 to 0.66)** → **Yellow**: unhealthy or sparse vegetation
-   - **Top class (0.66 to 1.0)** → **Green**: dense, healthy vegetation
+   - **First class (up to 0.05)** → **Red**: water, clouds and shadows, which have very low or negative NDVI
+   - **Second class (0.05 to 0.33)** → **Yellow**: bare soil, buildings and roads, or sparse and dry vegetation
+   - **Third class (0.33 to 0.66)** → **Green**: growing vegetation such as crops, grass and trees
 3. Click **Apply**, then **OK**.
 
 ![The NDVI result with red-yellow-green symbology applied.](07_Final_NDVI_Result.png "Final NDVI Result")
+
+::::::::::::::::::::::::::::::::::::: callout
+
+### Why are the values lower than on the reference scale?
+
+This image is a **Level-1C** product: top-of-atmosphere values, stored with a fixed offset of 1,000 added to
+every pixel (Sentinel-2 products processed since January 2022). Computing NDVI straight from these numbers, as
+we did, gives somewhat **lower** values than the surface-reflectance NDVI that reference scales describe, which
+is why the classes here stop at 0.66. The pattern (water, built-up land, vegetation) is still clear. For
+measurements you would publish, use the **Level-2A** (surface reflectance) product and subtract the offset
+first.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::: challenge
 
