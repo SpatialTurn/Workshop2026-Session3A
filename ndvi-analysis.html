@@ -313,7 +313,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Exercises: NDVI Analysis with Sentinel-2 Imagery</h1>
-        <p>Last updated on 2026-10-18 |
+        <p>Last updated on 2026-10-20 |
 
         <a href="https://github.com/SpatialTurn/Workshop2026-Session3A/edit/main/episodes/ndvi-analysis.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -459,13 +459,19 @@ pseudocolor</strong>.</li>
 <strong>Discrete</strong>.</li>
 <li>Set the <strong>Color ramp</strong> to <strong>Greens</strong>.</li>
 <li>Under the table, set the <strong>Mode</strong> to <strong>Equal
-Interval</strong> and reduce the <strong>Classes</strong> to
-<strong>3</strong>.</li>
-<li>In the <strong>Value</strong> column, enter the following from
-bottom to top: <code>0.66</code>, <code>0.33</code>,
-<code>0.05</code>.</li>
+Interval</strong>, reduce the <strong>Classes</strong> to
+<strong>3</strong> and click <strong>Classify</strong>.</li>
+<li>Double-click each number in the <strong>Value</strong> column and
+change the three values to <code>0.05</code>, <code>0.33</code> and
+<code>0.66</code> (QGIS keeps them in order, lowest at the top).</li>
 <li>Click <strong>Apply</strong>.</li>
-</ol><figure><img src="05_ColorTable.png" title="NDVI Color Table" alt="The symbology popup with three NDVI classes configured." class="figure mx-auto d-block"><div class="figcaption">The symbology popup with three NDVI classes
+</ol><p>The column header reads <strong>Value &lt;=</strong>: each value is
+the <strong>upper limit</strong> of its class. So the three classes are
+NDVI up to 0.05, from 0.05 to 0.33, and from 0.33 to 0.66. Pixels above
+the last value are left transparent; this image has almost none, but for
+other images change the last value to <code>1</code> so nothing
+disappears.</p>
+<figure><img src="05_ColorTable.png" title="NDVI Color Table" alt="The symbology popup with three NDVI classes configured." class="figure mx-auto d-block"><div class="figcaption">The symbology popup with three NDVI classes
 configured.</div>
 </figure><hr></section><section><h2 class="section-heading" id="step-6-refine-the-color-scheme">Step 6: Refine the Color Scheme<a class="anchor" aria-label="anchor" href="#step-6-refine-the-color-scheme"></a></h2>
 <hr class="half-width"><p>The green-only ramp shows the classification, but we can make
@@ -477,19 +483,42 @@ between NDVI values and vegetation health.</div>
 <ol style="list-style-type: decimal"><li>Reopen the <strong>Symbology</strong> tab.</li>
 <li>Double-click each color swatch to change it:
 <ul><li>
-<strong>Bottom class (0.05 to 0.33)</strong> → <strong>Red</strong>:
-inanimate objects, bare soil, or dead vegetation</li>
+<strong>First class (up to 0.05)</strong> → <strong>Red</strong>:
+water, clouds and shadows, which have very low or negative NDVI</li>
 <li>
-<strong>Middle class (0.33 to 0.66)</strong> →
-<strong>Yellow</strong>: unhealthy or sparse vegetation</li>
+<strong>Second class (0.05 to 0.33)</strong> →
+<strong>Yellow</strong>: bare soil, buildings and roads, or sparse and
+dry vegetation</li>
 <li>
-<strong>Top class (0.66 to 1.0)</strong> → <strong>Green</strong>:
-dense, healthy vegetation</li>
+<strong>Third class (0.33 to 0.66)</strong> →
+<strong>Green</strong>: growing vegetation such as crops, grass and
+trees</li>
 </ul></li>
 <li>Click <strong>Apply</strong>, then <strong>OK</strong>.</li>
 </ol><figure><img src="07_Final_NDVI_Result.png" title="Final NDVI Result" alt="The NDVI result with red-yellow-green symbology applied." class="figure mx-auto d-block"><div class="figcaption">The NDVI result with red-yellow-green symbology
 applied.</div>
-</figure><div id="exercise-1-interpret-the-ndvi-map" class="callout challenge">
+</figure><div id="why-are-the-values-lower-than-on-the-reference-scale" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-are-the-values-lower-than-on-the-reference-scale" class="callout-inner">
+<h3 class="callout-title">Why are the values lower than on the reference
+scale?</h3>
+<div class="callout-content">
+<p>This image is a <strong>Level-1C</strong> product: top-of-atmosphere
+values, stored with a fixed offset of 1,000 added to every pixel
+(Sentinel-2 products processed since January 2022). Computing NDVI
+straight from these numbers, as we did, gives somewhat
+<strong>lower</strong> values than the surface-reflectance NDVI that
+reference scales describe, which is why the classes here stop at 0.66.
+The pattern (water, built-up land, vegetation) is still clear. For
+measurements you would publish, use the <strong>Level-2A</strong>
+(surface reflectance) product and subtract the offset first.</p>
+</div>
+</div>
+</div>
+<div id="exercise-1-interpret-the-ndvi-map" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -626,8 +655,8 @@ Add reference-style links below as needed.
   "url": "https://SpatialTurn.github.io/Workshop2026-Session3A/ndvi-analysis.html",
   "identifier": "https://SpatialTurn.github.io/Workshop2026-Session3A/ndvi-analysis.html",
   "dateCreated": "2026-06-25",
-  "dateModified": "2026-10-18",
-  "datePublished": "2026-10-18"
+  "dateModified": "2026-10-20",
+  "datePublished": "2026-10-20"
 }
 
   </script><script>
